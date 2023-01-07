@@ -1,0 +1,126 @@
+h1 {
+    float: left;
+    font-size: 80px;
+    padding-top: 20px;
+    margin: 30px 0 0;
+    text-shadow: 4px 4px 7px #ffb4b4;
+}
+p {
+    padding-top: 35px;
+    float: left;
+}
+#center > img {
+    display: block;
+    width: 200px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffffff;
+}
+
+.center_text {
+    color: #930000;
+    font-family: Welland, Helvetica, SansSerif, serif;
+    margin-left: 30px;
+    display: block;
+}
+
+body{
+    background-color: #ffb4b4;
+}
+
+#center {
+    position: relative;
+    width: 900px;
+    height: 300px;
+    margin: 200px auto;
+    /*padding-top: 300px;*/
+    background-color: #ffffff;
+}
+
+.background_rects {
+    position: absolute;
+    width: 900px;
+    height: 310px;
+    /*margin: -200px auto;*/
+    background-color: #930000;
+    /*top: 15%;*/
+    /*left: 5%;*/
+    /*z-index: -2;*/
+}
+#rect1 {
+     top: 10%;
+     left: 5%;
+     z-index: -2;
+ }
+/*#rect2 {*/
+/*    bottom: 15%;*/
+/*    right: 5%;*/
+/*    z-index: -4;*/
+/*}*/
+/*#rect3 {*/
+/*    top: 45%;*/
+/*    left: 15%;*/
+/*    z-index: -6;*/
+/*}*/
+
+.background_divs {
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    /*margin: -200px auto;*/
+    background-color: #ffb4b4;
+    /*top: 7.5%;*/
+    /*left: 2.5%;*/
+    /*z-index: -1;*/
+}
+#div1 {
+    top: 5%;
+    left: 1.66%;
+    z-index: -1;
+}
+/*#div2 {*/
+/*    bottom: 7.5%;*/
+/*    right: 2.5%;*/
+/*    z-index: -3;*/
+/*}*/
+/*#div3 {*/
+/*    top: 37.5%;*/
+/*    left: 12.5%;*/
+/*    z-index: -5;*/
+/*}*/
+
+#counter {
+    color: black;
+}
+
+td {
+    /*color: #930000;*/
+    /*font-family: Welland, Helvetica, serif;*/
+    /*margin: 0 auto;*/
+}
+
+.bi {
+    position: absolute;
+    top: 150px;
+    display: block;
+    float: left;
+    font-size: 27px;
+    color: #ffb4b4;
+}
+.bi:hover {
+    color: #930000;
+    text-shadow: 4px 4px 7px #ffb4b4;
+}
+
+.bi-github {
+    left: 35px;
+}
+.bi-instagram {
+    left: 75px;
+}
+.bi-linkedin {
+    left: 115px;
+}
