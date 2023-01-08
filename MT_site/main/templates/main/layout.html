@@ -15,13 +15,20 @@
     </style>
   </head>
   <body>
-    <div id="center">
-      <h1 class="center_text">Miles Thomas</h1>
-      <img src="../../static/main/goodpic.jpg" alt="fun picture of me">
-      <a href="https://github.com/ths22115" class="bi bi-github"></a>
-      <a href="https://www.instagram.com/miles.th0mas" class="bi bi-instagram"></a>
-      <a href="https://www.linkedin.com/in/miles-thomas-552648245/" class="bi bi-linkedin"></a>
-      <p class="center_text">18 y/o college programmer :D</p>
+  <div id="initial_region">
+    <div id="center_panel">
+      <div class="background_rects" id="rect1"></div>
+      <div class="background_divs" id="div1"></div>
+      <div id="center">
+
+        <h1 id='center_header' class="center_text">Miles Thomas</h1>
+        <img src="../../static/main/goodpic.jpg" alt="fun picture of me">
+        <a href="https://github.com/ths22115" class="bi bi-github"></a>
+        <a href="https://www.instagram.com/miles.th0mas" class="bi bi-instagram"></a>
+        <a href="https://www.linkedin.com/in/miles-thomas-552648245/" class="bi bi-linkedin"></a>
+        <p class="center_text">18 y/o college programmer :D</p>
+    </div>
+
 
 <!--      <p class ="center_text" id="counter_heading">site in dev for</p>-->
 <!--      <div id="counter">-->
@@ -42,13 +49,47 @@
 <!--          </tr>-->
 <!--        </table>-->
 <!--      </div>-->
-      <div class="background_rects" id="rect1"></div>
-      <div class="background_divs" id="div1"></div>
-    </div>
-    <div class="projects">
 
+    </div>
+  </div>
+    <div id="projects">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
     </div>
     <div class="achievements"></div>
     <div class="activities"></div>
+  <script>
+    let VPwidth = parseInt(getComputedStyle(document.querySelector('#initial_region')).width.replace('px', ''));
+    let centerPanel_targetWidth = VPwidth * .653;
+    let centerPanel_targetHeight = centerPanel_targetWidth / 2.85;
+
+    // let center_targetWidth = centerPanel_targetWidth * .9715;
+    let center_targetWidth = (VPwidth * .6478) * .9715; // center, rect and div are all equal but independent of the center panel size
+    let center_targetHeight = (centerPanel_targetWidth / 2.7538) * .8756;
+
+    //margin for the rect to fill remaining space inside the panel
+    let backRect_targetLeftMargin = centerPanel_targetWidth - center_targetWidth;
+    let backRect_targetTopMargin = centerPanel_targetHeight - center_targetHeight;
+
+    document.getElementById("center_panel").style.height = centerPanel_targetHeight.toString() + 'px'; // sets center_panel dimensions = initial window width *  1:2.7 (HxW) aspect ratio
+    document.getElementById("center_panel").style.width = centerPanel_targetWidth.toString() + 'px';
+
+    document.getElementById('center').style.width = center_targetWidth.toString() + 'px'; // sets center backDiv and backRect dimensions
+    document.getElementById('center').style.height = center_targetHeight.toString() + 'px';
+    document.getElementById('div1').style.width = center_targetWidth.toString() + 'px';
+    document.getElementById('div1').style.height = center_targetHeight.toString() + 'px';
+    document.getElementById('rect1').style.width = center_targetWidth.toString() + 'px';
+    document.getElementById('rect1').style.height = center_targetHeight.toString() + 'px';
+
+    document.getElementById('rect1').style.marginLeft = backRect_targetLeftMargin.toString()  + 'px'; // sets rect margins
+    document.getElementById('rect1').style.marginTop = backRect_targetTopMargin.toString()  + 'px';
+
+    document.getElementById('div1').style.marginLeft = (backRect_targetLeftMargin/3.2).toString()  + 'px'; // sets div margins
+    document.getElementById('div1').style.marginTop = (backRect_targetTopMargin/2.5).toString()  + 'px';
+
+    let centerHeader_fontSize = center_targetHeight * .2676
+    document.querySelector('h1').style.fontSize = centerHeader_fontSize.toString() + 'px';
+  </script>
   </body>
 </html>
